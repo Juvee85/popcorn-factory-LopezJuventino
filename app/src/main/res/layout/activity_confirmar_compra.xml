@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    tools:context=".ConfirmarCompraActivity">
+
+    <TextView
+        android:layout_marginTop="45dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Muchas gracias"
+        android:textSize="25dp"
+        />
+
+    <TextView android:id="@+id/tvNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gale"
+        android:textStyle="bold"
+        android:textSize="35sp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="por comprar el asiento con número:"
+        android:textSize="25sp"
+        />
+
+    <TextView android:id="@+id/tvAsientoComprado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15"
+        android:textStyle="bold"
+        android:textSize="35sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="para la pelicula"
+        android:textSize="25sp"
+        />
+
+    <TextView android:id="@+id/tvNombrePelicula"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="lorax"
+        android:textStyle="bold"
+        android:textSize="35sp"
+        />
+
+    <Button android:id="@+id/btnSalir"
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salir"
+        />
+</LinearLayout>

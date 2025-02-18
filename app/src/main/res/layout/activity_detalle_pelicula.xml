@@ -8,31 +8,43 @@
     android:orientation="vertical"
     tools:context=".DetallePelicula">
 
-    <LinearLayout
+    <ImageView
+        android:id="@+id/ivPelicula"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_gravity="center"
+        android:src="@drawable/bones"/>
+
+    <TextView
+        android:id="@+id/tvNombrePelicula"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <ImageView
-            android:id="@+id/ivPelicula"
-            android:layout_width="113dp"
-            android:layout_height="85dp"
-            android:layout_gravity="center"
-            android:src="@drawable/bones"/>
+        android:text="BONES"
+        android:textSize="20sp"
+        android:gravity="center"/>
 
-        <TextView
-            android:id="@+id/tvNombrePelicula"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="BONES"
-            android:textSize="20sp"
-            android:gravity="center"/>
+    <TextView
+        android:id="@+id/tvDescPelicla"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lorem Itson"
+        android:textSize="20sp"/>
 
-        <TextView
-            android:id="@+id/tvDescPelicla"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Lorem Itson"
-            android:textSize="20sp"/>
-    </LinearLayout>
+    <Button
+        android:id="@+id/buyTickets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="buy my ticket!"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="20dp"
+        />
+
+    <TextView
+        android:id="@+id/seatsLeft"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        />
 
 </LinearLayout>

@@ -22,7 +22,8 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        cargarPeliculas()
+        if (peliculas.isEmpty())
+            cargarPeliculas()
 
         adapter = PeliculaAdapter(this, peliculas)
         var gridView: GridView = findViewById(R.id.gridView)
@@ -30,13 +31,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun cargarPeliculas() {
-        peliculas.add(Pelicula("1917", R.drawable.a1917, R.drawable.a1917header, "WW1"))
-        peliculas.add(Pelicula("1917", R.drawable.a1917, R.drawable.a1917header, "WW1"))
-        peliculas.add(Pelicula("1917", R.drawable.a1917, R.drawable.a1917header, "WW1"))
-        peliculas.add(Pelicula("1917", R.drawable.a1917, R.drawable.a1917header, "WW1"))
-        peliculas.add(Pelicula("1917", R.drawable.a1917, R.drawable.a1917header, "WW1"))
-        peliculas.add(Pelicula("1917", R.drawable.a1917, R.drawable.a1917header, "WW1"))
-        peliculas.add(Pelicula("1917", R.drawable.a1917, R.drawable.a1917header, "WW1"))
+        peliculas.add(Pelicula("1917", R.drawable.a1917, R.drawable.a1917header, "WW1", arrayListOf<Cliente>()))
+        peliculas.add(Pelicula("1917", R.drawable.a1917, R.drawable.a1917header, "WW1", arrayListOf<Cliente>()))
+        peliculas.add(Pelicula("1917", R.drawable.a1917, R.drawable.a1917header, "WW1", arrayListOf<Cliente>()))
+        peliculas.add(Pelicula("Toy Story", R.drawable.toystory, R.drawable.toystoryheader, "WW1", arrayListOf<Cliente>()))
+        peliculas.add(Pelicula("Dr. Who", R.drawable.drwho, R.drawable.drwhoheader, "Drama/Mystery", arrayListOf<Cliente>()))
+        peliculas.add(Pelicula("Friends", R.drawable.friends, R.drawable.friendsheader, "Sitcom/Drama", arrayListOf<Cliente>()))
     }
 }
 
@@ -70,6 +70,8 @@ class PeliculaAdapter(var context: Context, var peliculas: ArrayList<Pelicula>) 
             intent.putExtra("image", pelicula.image)
             intent.putExtra("header", pelicula.header)
             intent.putExtra("sinopsis", pelicula.sinopsis)
+            intent.putExtra("numeroAsientos", 20-pelicula.asientos.size)
+            intent.putExtra("posicion", position)
             context!!.startActivity(intent)
         }
 
